@@ -17,4 +17,3 @@ wrong_age(X) when X < 16;
 wrong_age(_) ->
     false.
 
-
