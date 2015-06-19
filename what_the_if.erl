@@ -9,7 +9,7 @@ heh_fine() ->
        1 =:= 1 ->
 	    works
     end,
-    if 1 =:= 2,
+    if 1 =:= 2, %% will throw a warning, since everything must return a value
        1 =:= 1 ->
 	    fails
     end.
@@ -18,7 +18,7 @@ oh_god(N) ->
     if N =:= 2 ->
 	    might_succeed;
        true ->
-	    always_does %% this is erlang's if's 'else!'
+	    always_does %% 'true ->' is erlang's if's 'else!'
     end.
 
 help_me(Animal) ->
