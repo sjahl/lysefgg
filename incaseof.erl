@@ -1,9 +1,9 @@
 -module(incaseof).
 -compile(export_all).
 
-insert(X,[]) ->
+insert(X,[]) -> % if we get an empty set, simply return set with X
     [X];
-insert(X,Set) ->
+insert(X,Set) -> % if we get a real set, check if X is there before adding.
     case lists:member(X,Set) of
 	true -> Set;
 	false -> [X|Set]
