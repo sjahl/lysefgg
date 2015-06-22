@@ -1,5 +1,5 @@
 -module(incaseof).
--compile(export_all).
+-export([insert/2, beach/1]).
 
 insert(X,[]) -> % if we get an empty set, simply return set with X
     [X];
